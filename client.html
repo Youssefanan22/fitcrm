@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FitCRM • Client</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="view">
+  <header class="topbar">
+    <h1>FitCRM</h1>
+    <nav class="nav">
+      <a class="btn-link" href="index.html">Add Client</a>
+      <a class="btn-link" href="clients.html">Client List</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="row space-between wrap">
+        <h2>Client Details</h2>
+        <a class="btn-outline" href="clients.html">← Back to List</a>
+      </div>
+
+      <div id="clientDetails" class="details"></div>
+      <hr class="sep" />
+
+      <h3>Exercises for the Next Session (5 suggestions)</h3>
+      <p class="hint">Fetched from Wger public REST API endpoints.</p>
+
+      <div class="row wrap">
+        <button id="refreshExercisesBtn" class="btn-outline" type="button">Refresh Suggestions</button>
+        <span id="exMsg" class="hint" aria-live="polite"></span>
+      </div>
+
+      <ul id="exerciseList" class="bullets"></ul>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

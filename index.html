@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FitCRM • Add Client</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="add">
+  <header class="topbar">
+    <h1>FitCRM</h1>
+    <nav class="nav">
+      <a class="btn-link" href="index.html">Add Client</a>
+      <a class="btn-link" href="clients.html">Client List</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>New Client</h2>
+
+      <form id="clientForm" novalidate>
+        <div class="grid">
+          <label>
+            Name *
+            <input id="name" type="text" required minlength="2" placeholder="e.g., Sara Ahmed" />
+          </label>
+
+          <label>
+            Email *
+            <input id="email" type="email" required placeholder="e.g., sara@email.com" />
+          </label>
+
+          <label>
+            Phone *
+            <input id="phone" type="tel" required placeholder="e.g., 01012345678" />
+          </label>
+
+          <label>
+            Fitness Goal *
+            <input id="goal" type="text" required placeholder="e.g., Fat loss + strength" />
+          </label>
+
+          <label>
+            Membership Start Date *
+            <input id="startDate" type="date" required />
+          </label>
+
+          <label class="full">
+            Training History (optional)
+            <textarea id="history" rows="4" placeholder="e.g., 3x/week, past knee injury..."></textarea>
+          </label>
+        </div>
+
+        <div class="actions">
+          <button class="btn" type="submit" id="addClientBtn">Add Client</button>
+          <p class="hint" id="formMsg" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

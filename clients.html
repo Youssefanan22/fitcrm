@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FitCRM • Client List</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="list">
+  <header class="topbar">
+    <h1>FitCRM</h1>
+    <nav class="nav">
+      <a class="btn-link" href="index.html">Add Client</a>
+      <a class="btn-link" href="clients.html">Client List</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="row space-between wrap">
+        <h2>Clients</h2>
+
+        <div class="row wrap">
+          <input id="searchInput" class="input" type="text" placeholder="Search by name..." />
+          <button id="searchBtn" class="btn-outline" type="button">Search</button>
+          <button id="clearSearchBtn" class="btn-outline" type="button">Clear</button>
+        </div>
+      </div>
+
+      <div id="listMsg" class="hint" aria-live="polite"></div>
+
+      <div id="clientList" class="list"></div>
+    </section>
+
+    <section class="card" id="editSection" hidden>
+      <h2>Edit Client</h2>
+
+      <form id="editForm" novalidate>
+        <input type="hidden" id="editId" />
+
+        <div class="grid">
+          <label>
+            Name *
+            <input id="editName" type="text" required minlength="2" />
+          </label>
+
+          <label>
+            Email *
+            <input id="editEmail" type="email" required />
+          </label>
+
+          <label>
+            Phone *
+            <input id="editPhone" type="tel" required />
+          </label>
+
+          <label>
+            Fitness Goal *
+            <input id="editGoal" type="text" required />
+          </label>
+
+          <label>
+            Membership Start Date *
+            <input id="editStartDate" type="date" required />
+          </label>
+
+          <label class="full">
+            Training History (optional)
+            <textarea id="editHistory" rows="4"></textarea>
+          </label>
+        </div>
+
+        <div class="actions">
+          <button class="btn" type="submit">Save Changes</button>
+          <button class="btn-outline" id="cancelEditBtn" type="button">Cancel</button>
+          <p class="hint" id="editMsg" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

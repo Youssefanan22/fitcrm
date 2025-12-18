@@ -1,0 +1,66 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, Arial, sans-serif; background: #f6f7fb; color: #111; }
+a { color: inherit; text-decoration: none; }
+
+.topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 18px; background: #111; color: #fff;
+}
+.nav { display: flex; gap: 10px; }
+.btn-link { padding: 8px 10px; border-radius: 10px; background: rgba(255,255,255,0.12); }
+
+.container { max-width: 980px; margin: 18px auto; padding: 0 14px; }
+.card {
+  background: #fff; border-radius: 16px; padding: 16px;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.06); margin-bottom: 14px;
+}
+.row { display: flex; align-items: center; gap: 10px; }
+.wrap { flex-wrap: wrap; }
+.space-between { justify-content: space-between; }
+
+.grid {
+  display: grid; gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.full { grid-column: 1 / -1; }
+
+label { display: grid; gap: 6px; font-weight: 600; }
+input, textarea {
+  width: 100%; padding: 10px 12px; border-radius: 12px;
+  border: 1px solid #ddd; font: inherit; background: #fff;
+}
+.input { padding: 10px 12px; border-radius: 12px; border: 1px solid #ddd; }
+
+.actions { display: flex; align-items: center; gap: 12px; margin-top: 12px; flex-wrap: wrap; }
+.btn {
+  border: 0; padding: 10px 14px; border-radius: 12px;
+  background: #111; color: #fff; cursor: pointer; font-weight: 700;
+}
+.btn-outline {
+  border: 1px solid #111; padding: 10px 14px; border-radius: 12px;
+  background: transparent; cursor: pointer; font-weight: 700;
+}
+.hint { color: #555; margin: 0; }
+.sep { border: none; border-top: 1px solid #eee; margin: 14px 0; }
+
+.list { display: grid; gap: 10px; margin-top: 12px; }
+.item {
+  border: 1px solid #eee; border-radius: 14px; padding: 12px;
+  display: grid; gap: 10px;
+}
+.item .meta { display: grid; gap: 3px; }
+.item .name { font-weight: 800; font-size: 1.05rem; }
+.item .small { color: #666; font-size: 0.92rem; }
+.item .btns { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.details { display: grid; gap: 8px; }
+.kv { display: grid; gap: 3px; }
+.kv .k { color: #666; font-size: 0.9rem; }
+.kv .v { font-weight: 700; }
+
+.bullets { margin: 10px 0 0; padding-left: 20px; }
+.bullets li { margin: 6px 0; }
+
+@media (max-width: 720px) {
+  .grid { grid-template-columns: 1fr; }
+}
